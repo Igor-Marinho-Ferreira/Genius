@@ -41,11 +41,11 @@ void SelecionarMenuPrincipal(){
                 system("cls");
                 gotoxy(0,0);
                 printf("ENCERRADO!");
-                sleep(1);
+                
                 break;
             case 1:
-            do
-            {
+            	system("cls");
+			do{
                 printf("Digite a proxima letra de A-Z: ");
                 scanf("%s", &atual);
                 push(atual,&topo);
@@ -55,7 +55,6 @@ void SelecionarMenuPrincipal(){
                 aux++;
                 printf("Proxima letra: %c. Voce tem 3 segundos para memorizar\n", vetor[contador]);
 
-                sleep(3);
                 system("cls");
                 printf("Digite a sequencia: ");
                 scanf("%s", resposta);
@@ -69,6 +68,7 @@ void SelecionarMenuPrincipal(){
                     else{
                         system("cls");
                         printf("\nParabens!! +10 pontos!\n");
+                        
                         pontos +=10;
                     }
                 }
@@ -77,12 +77,11 @@ void SelecionarMenuPrincipal(){
                 break;
             case 2:
                 system("cls");
-                sleep(3);
+                
                 system("cls");
                 break;
             case 3:
                 system("cls");
-                sleep(3);
                 system("cls");
                 break;
             case 4:
