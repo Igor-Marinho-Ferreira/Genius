@@ -54,7 +54,7 @@ void SelecionarMenuPrincipal(){
                 vetor[contador+1] = atual;
                 aux++;
                 printf("Proxima letra: %c. Voce tem 3 segundos para memorizar\n", vetor[contador]);
-
+				sleep(3);
                 system("cls");
                 printf("Digite a sequencia: ");
                 scanf("%s", resposta);
@@ -67,8 +67,9 @@ void SelecionarMenuPrincipal(){
                     }
                     else{
                         system("cls");
-                        printf("\nParabens!! +10 pontos!\n");
-                        
+                        printf("Parabens! +10 pontos!\n");
+                        sleep(3);
+                        system("cls");
                         pontos +=10;
                     }
                 }
