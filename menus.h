@@ -78,17 +78,10 @@ void SelecionarMenuPrincipal(){
                 break;
             case 2:
                 system("cls");
-                
+                printf("Em breve");
+		sleep(3);
                 system("cls");
                 break;
-            case 3:
-                system("cls");
-                system("cls");
-                break;
-            case 4:
-                system("cls");
-                system("pause");
-                system("cls");
         }        
     }while (Opcao != 0);
 }
