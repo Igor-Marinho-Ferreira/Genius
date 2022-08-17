@@ -45,7 +45,7 @@ void SelecionarMenuPrincipal(){
                 break;
             case 1:
             	system("cls");
-			do{
+		do{
                 printf("Digite a proxima letra de A-Z: ");
                 scanf("%s", &atual);
                 push(atual,&topo);
@@ -61,6 +61,7 @@ void SelecionarMenuPrincipal(){
                 for (int i = 0; i <= ver; i++)
                 {
                     if(vetor[i] != resposta[i]){
+			system("cls");
                         printf("\nVoce perdeu!!\nSua pontuacao: %d", pontos);
                         printf("\nSequencia correta: %s", vetor);
                         exit(0);
@@ -75,7 +76,7 @@ void SelecionarMenuPrincipal(){
                 }
                 
             } while (contador <= 9);
-                break;
+            	break;
             case 2:
                 system("cls");
                 printf("Em breve");
