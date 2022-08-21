@@ -2,15 +2,19 @@
 #include <stdlib.h>
 #include <conio.h>
 #include "design.h"
-#include "menus.h"
 #include "push.h"
+
+struct ranking {
+  char nome[20];
+};
 
 char resposta[999];
 char vetor[999];
 int contador = 0, aux = 1;
 struct no *topo = NULL;
+struct ranking nome;
 
-void empilhaAleatorios(){
+void empilhaRandom(){
     int i;
     for(i=0; i<1; i++){
         vetor[i]= 97 + (char)(rand()%26);
@@ -46,42 +50,43 @@ void SelecionarMenuPrincipal(){
                 break;
             case 1:
             	system("cls");
-		do{
-                printf("Digite a proxima letra de A-Z: ");
-                scanf("%s", &atual);
-                push(atual,&topo);
-                empilhaAleatorios();
-                contador = contador -1;
-                vetor[contador+1] = atual;
-                aux++;
-                printf("Proxima letra: %c. Voce tem 3 segundos para memorizar\n", vetor[contador]);
-				sleep(3);
-                system("cls");
-                printf("Digite a sequencia: ");
-                scanf("%s", resposta);
-                for (int i = 0; i <= ver; i++)
-                {
-                    if(vetor[i] != resposta[i]){
-			system("cls");
-                        printf("\nVoce perdeu!!\nSua pontuacao: %d", pontos);
-                        printf("\nSequencia correta: %s", vetor);
-                        exit(0);
-                    }
-                    else{
-                        system("cls");
-                        printf("Parabens! +10 pontos!\n");
-                        sleep(3);
-                        system("cls");
-                        pontos +=10;
-                    }
-                }
-                
-            } while (contador <= 9);
+			    printf("Digite seu nome: ");
+			    scanf("%s", &nome.nome);
+				do{
+	                printf("Digite a proxima letra de A-Z: ");
+	                scanf("%s", &atual);
+	                push(atual,&topo);
+	                empilhaRandom();
+	                contador = contador -1;
+	                vetor[contador+1] = atual;
+	                aux++;
+	                printf("Proxima letra: %c. Voce tem 3 segundos para memorizar\n", vetor[contador]);
+					sleep(3);
+	                system("cls");
+	                printf("Digite a sequencia: ");
+	                scanf("%s", resposta);
+	                for (int i = 0; i <= ver; i++)
+	                {
+	                    if(vetor[i] != resposta[i]){
+							system("cls");
+	                        printf("\nVoce perdeu, %s!!\nSua pontuacao: %d", nome.nome, pontos);
+	                        printf("\nSequencia correta: %s", vetor);
+	                        exit(0);
+	                    }
+	                    else{
+	                        system("cls");
+	                        printf("Parabens, %s! +10 pontos!\n", nome.nome);
+	                        sleep(3);
+	                        system("cls");
+	                        pontos +=10;
+	                    }
+	                } 
+	            }while (contador <= 9);
             	break;
             case 2:
                 system("cls");
                 printf("Em breve");
-		sleep(3);
+				sleep(3);
                 system("cls");
                 break;
         }        
@@ -94,4 +99,3 @@ int main()
     SelecionarMenuPrincipal();
     return 0;
 }
-
