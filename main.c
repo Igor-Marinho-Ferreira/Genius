@@ -51,6 +51,7 @@ void SelecionarMenuPrincipal(){
             	system("cls");
 		printf("Digite seu nome: ");
 		scanf("%s", &nome.nome);
+		system("cls");
 		do{
 	        	printf("Digite a proxima letra de A-Z: ");
 	                scanf("%s", &atual);
@@ -70,7 +71,9 @@ void SelecionarMenuPrincipal(){
 				system("cls");
 	                        printf("\nVoce perdeu, %s!!\nSua pontuacao: %d", nome.nome, pontos);
 	                        printf("\nSequencia correta: %s", vetor);
-	                        exit(0);
+	                        system("PAUSE");
+	                        system("cls");
+	                        SelecionarMenuPrincipal();
 	                    }
 	                    else{
 	                        system("cls");
