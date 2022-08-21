@@ -46,7 +46,6 @@ void SelecionarMenuPrincipal(){
                 system("cls");
                 gotoxy(0,0);
                 printf("ENCERRADO!");
-                
                 break;
             case 1:
             	system("cls");
