@@ -69,7 +69,9 @@ void SelecionarMenuPrincipal(){
 				system("cls");
 	                        printf("\nVoce perdeu!! %s \nSua pontuacao: %d", nome.nome, pontos);
 	                        printf("\nSequencia correta: %s", vetor);
-	                        exit(0);
+	                        system("PAUSE");
+	                        system("cls");
+	                        SelecionarMenuPrincipal();
 	                    }
 	                    else{
 	                        system("cls");
