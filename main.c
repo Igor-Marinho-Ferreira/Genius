@@ -50,10 +50,10 @@ void SelecionarMenuPrincipal(){
                 break;
             case 1:
             	system("cls");
-			    printf("Digite seu nome: ");
-			    scanf("%s", &nome.nome);
-				do{
-	                printf("Digite a proxima letra de A-Z: ");
+		printf("Digite seu nome: ");
+		scanf("%s", &nome.nome);
+		do{
+	        	printf("Digite a proxima letra de A-Z: ");
 	                scanf("%s", &atual);
 	                push(atual,&topo);
 	                empilhaRandom();
@@ -61,14 +61,14 @@ void SelecionarMenuPrincipal(){
 	                vetor[contador+1] = atual;
 	                aux++;
 	                printf("Proxima letra: %c. Voce tem 3 segundos para memorizar\n", vetor[contador]);
-					sleep(3);
+			sleep(3);
 	                system("cls");
 	                printf("Digite a sequencia: ");
 	                scanf("%s", resposta);
 	                for (int i = 0; i <= ver; i++)
 	                {
 	                    if(vetor[i] != resposta[i]){
-							system("cls");
+				system("cls");
 	                        printf("\nVoce perdeu, %s!!\nSua pontuacao: %d", nome.nome, pontos);
 	                        printf("\nSequencia correta: %s", vetor);
 	                        exit(0);
@@ -86,7 +86,7 @@ void SelecionarMenuPrincipal(){
             case 2:
                 system("cls");
                 printf("Em breve");
-				sleep(3);
+		sleep(3);
                 system("cls");
                 break;
         }        
